@@ -131,3 +131,7 @@ button {
 .footer button.active{
     background-color: rgb(41, 58, 249);
 }
+
+.completed-todo{
+  text-decoration: line-through;
+}

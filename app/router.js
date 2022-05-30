@@ -7,6 +7,11 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('alltodo', {path: ''});
+  this.route('alltodo', {path: '/*wildcard'});
+  this.route('alltodo');
+  this.route('pending');
+  this.route('completed');
 });
 
 export default Router;
