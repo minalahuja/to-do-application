@@ -1,19 +1,14 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
 
+{{todo-header}}
 
 <div class="wrapper">
 
-    <div class="inputField">
-        <input type="text" placeholder="What needs to be done?">
-        <button> <i class="fas fa-plus"></i> Add</button>
-    </div>
-
-    <header>Todo List</header>
     
     <ul class="todoList">
-                {{#each model as |completed|}}
-                    {{#if completed.completed}}
-                        <li class="completed-todo"> <input type="checkbox" class="checkbox"> {{completed.title}} <span> <i class="fa fa-trash"></i></span></li>
+                {{#each model as |alltodo|}}
+                    {{#if alltodo.completed}}
+                        <li class="completed-todo"> <input type="checkbox" class="checkbox"> {{alltodo.title}} <span> <i class="fa fa-trash"></i></span></li>
                     {{/if}}
                 {{/each}}
     </ul>
